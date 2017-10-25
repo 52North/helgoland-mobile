@@ -7,8 +7,8 @@ import { NavController } from 'ionic-angular';
 })
 export class TimeseriesProviderPage {
 
-  constructor(public navCtrl: NavController) {
-
-  }
+  constructor(
+    public navCtrl: NavController,
+  ) { }
 
 }

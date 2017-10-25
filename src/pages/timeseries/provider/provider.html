@@ -1,17 +1,11 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Provider
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+  <n52-provider-selector [providerList]="['http://www.fluggs.de/sos2/api/v1/']" [supportStations]="true"></n52-provider-selector>
 </ion-content>
