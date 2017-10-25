@@ -10,5 +10,11 @@ module.exports = {
       '{{ROOT}}/node_modules/Flot/jquery.flot.js'
     ],
     dest: '{{BUILD}}'
+  },
+  copyLeafletIcons: {
+    src: [
+      '{{ROOT}}/node_modules/leaflet/dist/images/*'
+    ],
+    dest: '{{BUILD}}/images/'
   }
 }
