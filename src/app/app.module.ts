@@ -8,6 +8,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ApiInterface, GetDataApiInterface, Settings } from 'helgoland-toolbox';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
+import { ComponentsModule } from '../components/components.module';
 import { TimeseriesModule } from '../pages/timeseries/timeseries.module';
 import { MyApp } from './app.component';
 import { SettingsService } from './services/settings.service';
@@ -23,6 +24,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   imports: [
     BrowserModule,
     TimeseriesModule,
+    ComponentsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

@@ -3,6 +3,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { HelgolandFlotGraphModule, HelgolandMapSelectorModule, HelgolandSelectorModule } from 'helgoland-toolbox';
 import { IonicModule } from 'ionic-angular';
 
+import { ComponentsModule } from '../../components/components.module';
 import { TimeseriesDiagramPage } from './diagram/diagram';
 import { TimeseriesListPage } from './list/list';
 import {
@@ -28,6 +29,7 @@ import { TimeseriesProviderPage } from './provider/provider';
         HelgolandMapSelectorModule,
         HelgolandFlotGraphModule,
         TranslateModule.forChild(),
+        ComponentsModule,
         IonicModule
     ],
     entryComponents: [

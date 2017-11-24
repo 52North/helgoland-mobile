@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Select a provider
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <mobile-provider-selector [providerList]="providerList" [supportStations]="supportStations" [selectedProvider]="selectedProvider"
+    (onProviderSelected)="providerSelected($event)"></mobile-provider-selector>
+</ion-content>

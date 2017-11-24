@@ -28,6 +28,8 @@
 	"timeseries": {
 		"map-selection": {
 			"dataset-selection-hint": "Bitte wählen Sie eine oder mehrere Zeitreihen zur Darstellung aus",
+			"header": "Karte",
+			"provider": "Provider",
 			"show-in-diagram": "Zeige {{value}} Zeitreihen im Diagramm"
 		}
 	}

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { Platform } from 'helgoland-toolbox';
+import { Platform, Service } from 'helgoland-toolbox';
 import { ModalController, NavController } from 'ionic-angular';
 
+import { ModalProviderSelectorComponent } from '../../../components/modal-provider-selector/modal-provider-selector';
 import { StationSelectorComponent } from './station-selector/station-selector';
 
 @Component({
@@ -10,21 +11,33 @@ import { StationSelectorComponent } from './station-selector/station-selector';
 })
 export class TimeseriesMapPage {
 
-  public providerUrl = 'http://www.fluggs.de/sos2/api/v1/';
+  public selectedProvider: Service;
 
   constructor(
     public navCtrl: NavController,
     public modalCtrl: ModalController
-  ) { }
-
-  public onStationSelected(platform: Platform) {
-    const modal = this.modalCtrl.create(StationSelectorComponent,
-      {
-        platform,
-        providerUrl: this.providerUrl
-      }
-    );
-    modal.present();
+  ) {
+    if (!this.selectedProvider) {
+      this.openProviderSelection();
+    }
   }
 
+  public onStationSelected(platform: Platform) {
+    this.modalCtrl.create(StationSelectorComponent,
+      {
+        platform,
+        providerUrl: this.selectedProvider.providerUrl
+      }
+    ).present();
+  }
+
+  public openProviderSelection() {
+    const modal = this.modalCtrl.create(ModalProviderSelectorComponent, {
+      selectedProvider: this.selectedProvider
+    })
+    modal.onDidDismiss((service: Service) => {
+      this.selectedProvider = service;
+    })
+    modal.present();
+  }
 }

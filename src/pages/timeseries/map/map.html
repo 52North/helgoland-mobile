@@ -1,12 +1,17 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Map selection
+      {{'timeseries.map-selection.header' | translate}}
     </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="openProviderSelection()">
+        {{'timeseries.map-selection.provider' | translate}}
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <n52-station-map-selector [mapId]="'timeseries'" [serviceUrl]="providerUrl" [filter]="stationFilter"
+  <n52-station-map-selector *ngIf="selectedProvider" [mapId]="'timeseries'" [serviceUrl]="selectedProvider.providerUrl" [filter]="stationFilter"
     (onSelected)="onStationSelected($event)" [cluster]="true"></n52-station-map-selector>
 </ion-content>

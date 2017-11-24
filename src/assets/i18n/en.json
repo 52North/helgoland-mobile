@@ -28,6 +28,8 @@
 	"timeseries": {
 		"map-selection": {
 			"dataset-selection-hint": "Please select one or more timeseries to display in diagram",
+			"header": "Map",
+			"provider": "Provider",
 			"show-in-diagram": "Show {{value}} timeseries in diagram"
 		}
 	}
