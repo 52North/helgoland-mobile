@@ -16,7 +16,11 @@ import {
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { TimeseriesListPage } from '../pages/timeseries/list/list';
+import {
+    MobileDatasetByStationSelectorComponent,
+} from '../pages/timeseries/map/dataset-by-station-selector/dataset-by-station-selector.component';
 import { TimeseriesMapPage } from '../pages/timeseries/map/map';
+import { StationSelectorComponent } from '../pages/timeseries/map/station-selector/station-selector';
 import { TimeseriesProviderPage } from '../pages/timeseries/provider/provider';
 import { TimeseriesDiagramPage } from './../pages/timeseries/diagram/diagram';
 import { TimeseriesNavigationPage } from './../pages/timeseries/navigation/navigation';
@@ -30,6 +34,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     MyApp,
+    StationSelectorComponent,
+    MobileDatasetByStationSelectorComponent,
     TimeseriesNavigationPage,
     TimeseriesDiagramPage,
     TimeseriesMapPage,
@@ -53,6 +59,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    StationSelectorComponent,
+    MobileDatasetByStationSelectorComponent,
     TimeseriesNavigationPage,
     TimeseriesDiagramPage,
     TimeseriesMapPage,

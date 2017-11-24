@@ -1,0 +1,34 @@
+{
+	"favorite": {
+		"notifier": {
+			"add-favorite": "Füge Favoriten hinzu",
+			"remove-favorite": "Entferne Favoriten"
+		}
+	},
+	"listSelection": {
+		"loading": ""
+	},
+	"profiles": {
+		"legend": {
+			"delete-subentry": "Entferne dieses Profil",
+			"edit-style": "Verändere das Aussehen dieses Profils",
+			"go-to-combi-view": "Zeige in der kombinierten Ansicht",
+			"show-geometry": "Zeige Profil-Geometry",
+			"visibility": "Zeige/Verstecke das Profil"
+		}
+	},
+	"provider-selector": {
+		"datasets": "Datensätze",
+		"phenomena": "Phänomene",
+		"platforms": "Platformen",
+		"service-url": "Service-Url",
+		"stations": "Stationen",
+		"timeseries": "Zeitreihen"
+	},
+	"timeseries": {
+		"map-selection": {
+			"dataset-selection-hint": "Bitte wählen Sie eine oder mehrere Zeitreihen zur Darstellung aus",
+			"show-in-diagram": "Zeige {{value}} Zeitreihen im Diagramm"
+		}
+	}
+}

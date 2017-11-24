@@ -7,6 +7,6 @@
 </ion-header>
 
 <ion-content>
-  <n52-station-map-selector [mapId]="'timeseries'" [serviceUrl]="'http://www.fluggs.de/sos2/api/v1/'" [filter]="stationFilter"
+  <n52-station-map-selector [mapId]="'timeseries'" [serviceUrl]="providerUrl" [filter]="stationFilter"
     (onSelected)="onStationSelected($event)" [cluster]="true"></n52-station-map-selector>
 </ion-content>
