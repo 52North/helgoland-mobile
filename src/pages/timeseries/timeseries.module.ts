@@ -12,7 +12,6 @@ import {
 import { TimeseriesMapPage } from './map/map';
 import { StationSelectorComponent } from './map/station-selector/station-selector';
 import { TimeseriesNavigationPage } from './navigation/navigation';
-import { TimeseriesProviderPage } from './provider/provider';
 
 @NgModule({
     declarations: [
@@ -20,7 +19,6 @@ import { TimeseriesProviderPage } from './provider/provider';
         TimeseriesDiagramPage,
         TimeseriesMapPage,
         TimeseriesListPage,
-        TimeseriesProviderPage,
         StationSelectorComponent,
         MobileDatasetByStationSelectorComponent
     ],
@@ -38,8 +36,7 @@ import { TimeseriesProviderPage } from './provider/provider';
         TimeseriesNavigationPage,
         TimeseriesDiagramPage,
         TimeseriesMapPage,
-        TimeseriesListPage,
-        TimeseriesProviderPage
+        TimeseriesListPage
     ]
 })
 export class TimeseriesModule { }
