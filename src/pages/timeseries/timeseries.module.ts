@@ -12,6 +12,7 @@ import {
 import { TimeseriesMapPage } from './map/map';
 import { StationSelectorComponent } from './map/station-selector/station-selector';
 import { TimeseriesNavigationPage } from './navigation/navigation';
+import { TimeseriesService } from './timeseries.service';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,7 @@ import { TimeseriesNavigationPage } from './navigation/navigation';
         StationSelectorComponent,
         MobileDatasetByStationSelectorComponent
     ],
-    imports : [
+    imports: [
         HelgolandSelectorModule,
         HelgolandMapSelectorModule,
         HelgolandFlotGraphModule,
@@ -37,6 +38,9 @@ import { TimeseriesNavigationPage } from './navigation/navigation';
         TimeseriesDiagramPage,
         TimeseriesMapPage,
         TimeseriesListPage
+    ],
+    providers: [
+        TimeseriesService
     ]
 })
 export class TimeseriesModule { }

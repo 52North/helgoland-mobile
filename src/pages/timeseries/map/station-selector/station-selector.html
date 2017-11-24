@@ -18,7 +18,7 @@
 <ion-footer>
   <ion-toolbar>
     <ion-buttons end>
-      <button *ngIf="datasetSelections.length > 0" ion-button icon-right color="royal">
+      <button *ngIf="datasetSelections.length > 0" ion-button icon-right color="royal" (click)="confirmSelection()">
         <span translate [translateParams]="{value: datasetSelections.length}">timeseries.map-selection.show-in-diagram</span>
       </button>
     </ion-buttons>
