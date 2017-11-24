@@ -5,25 +5,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import {
-    ApiInterface,
-    GetDataApiInterface,
-    HelgolandFlotGraphModule,
-    HelgolandMapSelectorModule,
-    HelgolandSelectorModule,
-    Settings,
-} from 'helgoland-toolbox';
+import { ApiInterface, GetDataApiInterface, Settings } from 'helgoland-toolbox';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
-import { TimeseriesListPage } from '../pages/timeseries/list/list';
-import {
-    MobileDatasetByStationSelectorComponent,
-} from '../pages/timeseries/map/dataset-by-station-selector/dataset-by-station-selector.component';
-import { TimeseriesMapPage } from '../pages/timeseries/map/map';
-import { StationSelectorComponent } from '../pages/timeseries/map/station-selector/station-selector';
-import { TimeseriesProviderPage } from '../pages/timeseries/provider/provider';
-import { TimeseriesDiagramPage } from './../pages/timeseries/diagram/diagram';
-import { TimeseriesNavigationPage } from './../pages/timeseries/navigation/navigation';
+import { TimeseriesModule } from '../pages/timeseries/timeseries.module';
 import { MyApp } from './app.component';
 import { SettingsService } from './services/settings.service';
 
@@ -34,19 +19,10 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     MyApp,
-    StationSelectorComponent,
-    MobileDatasetByStationSelectorComponent,
-    TimeseriesNavigationPage,
-    TimeseriesDiagramPage,
-    TimeseriesMapPage,
-    TimeseriesListPage,
-    TimeseriesProviderPage
   ],
   imports: [
     BrowserModule,
-    HelgolandSelectorModule,
-    HelgolandMapSelectorModule,
-    HelgolandFlotGraphModule,
+    TimeseriesModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -59,13 +35,6 @@ export function HttpLoaderFactory(http: HttpClient) {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    StationSelectorComponent,
-    MobileDatasetByStationSelectorComponent,
-    TimeseriesNavigationPage,
-    TimeseriesDiagramPage,
-    TimeseriesMapPage,
-    TimeseriesListPage,
-    TimeseriesProviderPage
   ],
   providers: [
     StatusBar,
