@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { HelgolandFlotGraphModule, HelgolandMapSelectorModule, HelgolandSelectorModule } from 'helgoland-toolbox';
+import {
+    HelgolandDatasetlistModule,
+    HelgolandFlotGraphModule,
+    HelgolandMapSelectorModule,
+    HelgolandSelectorModule,
+} from 'helgoland-toolbox';
 import { IonicModule } from 'ionic-angular';
 
 import { ComponentsModule } from '../../components/components.module';
 import { TimeseriesDiagramPage } from './diagram/diagram';
+import { ModalLegendComponent } from './diagram/modal-legend/modal-legend';
 import { TimeseriesListPage } from './list/list';
 import {
     MobileDatasetByStationSelectorComponent,
@@ -21,12 +27,14 @@ import { TimeseriesService } from './timeseries.service';
         TimeseriesMapPage,
         TimeseriesListPage,
         StationSelectorComponent,
-        MobileDatasetByStationSelectorComponent
+        MobileDatasetByStationSelectorComponent,
+        ModalLegendComponent
     ],
     imports: [
         HelgolandSelectorModule,
         HelgolandMapSelectorModule,
         HelgolandFlotGraphModule,
+        HelgolandDatasetlistModule,
         TranslateModule.forChild(),
         ComponentsModule,
         IonicModule
@@ -37,7 +45,8 @@ import { TimeseriesService } from './timeseries.service';
         TimeseriesNavigationPage,
         TimeseriesDiagramPage,
         TimeseriesMapPage,
-        TimeseriesListPage
+        TimeseriesListPage,
+        ModalLegendComponent
     ],
     providers: [
         TimeseriesService

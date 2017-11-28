@@ -1,4 +1,8 @@
 {
+	"controls": {
+		"cancel": "Cancel",
+		"ok": "Ok"
+	},
 	"favorite": {
 		"notifier": {
 			"add-favorite": "Füge Favoriten hinzu",
@@ -31,6 +35,12 @@
 			"header": "Karte",
 			"provider": "Provider",
 			"show-in-diagram": "Zeige {{value}} Zeitreihen im Diagramm"
+		},
+		"show-geometry-header": "Position der Station",
+		"style-edit": {
+			"generalize": "Daten generalisieren",
+			"header": "Zeitreihenerscheinung ändern",
+			"zeroBasedYAxe": "Zeitreihe null-basiert"
 		}
 	}
 }

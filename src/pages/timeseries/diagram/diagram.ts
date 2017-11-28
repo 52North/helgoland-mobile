@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { DatasetOptions, PlotOptions, Timespan } from 'helgoland-toolbox';
-import { NavController } from 'ionic-angular';
+import { ModalController, NavController } from 'ionic-angular';
 
 import { TimeseriesService } from '../timeseries.service';
+import { ModalLegendComponent } from './modal-legend/modal-legend';
 
 @Component({
   selector: 'page-home',
@@ -32,12 +33,14 @@ export class TimeseriesDiagramPage {
       min: null,
       panRange: false,
       show: true,
-    }
+    },
+    showReferenceValues: true
   };
 
   constructor(
     public navCtrl: NavController,
-    public timeseriesSrvc: TimeseriesService
+    public timeseriesSrvc: TimeseriesService,
+    public modalCtrl: ModalController
   ) {
     this.datasetIds = this.timeseriesSrvc.datasetIds;
     this.datasetOptions = this.timeseriesSrvc.datasetOptions;
@@ -54,6 +57,12 @@ export class TimeseriesDiagramPage {
   }
 
   public openLegend() {
-    debugger;
+    const modal = this.modalCtrl.create(ModalLegendComponent);
+    modal.onDidDismiss(data => {
+      if (data instanceof Timespan) {
+        this.timespanChanged(data);
+      }
+    })
+    modal.present();
   }
 }

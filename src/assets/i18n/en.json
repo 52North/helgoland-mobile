@@ -1,4 +1,8 @@
 {
+	"controls": {
+		"cancel": "Cancel",
+		"ok": "Ok"
+	},
 	"favorite": {
 		"notifier": {
 			"add-favorite": "Add favorite",
@@ -31,6 +35,12 @@
 			"header": "Map",
 			"provider": "Provider",
 			"show-in-diagram": "Show {{value}} timeseries in diagram"
+		},
+		"show-geometry-header": "Position of the station",
+		"style-edit": {
+			"generalize": "Generalize data",
+			"header": "Change style of this timeseries",
+			"zeroBasedYAxe": "Timeseries zero based"
 		}
 	}
 }

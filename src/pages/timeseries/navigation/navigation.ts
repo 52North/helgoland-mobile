@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { TimeseriesDiagramPage } from '../diagram/diagram';
 import { TimeseriesListPage } from '../list/list';
+import { TimeseriesService } from '../timeseries.service';
 import { TimeseriesMapPage } from './../map/map';
 
 @Component({
@@ -13,7 +14,11 @@ export class TimeseriesNavigationPage {
   mapPage = TimeseriesMapPage;
   listPage = TimeseriesListPage;
 
-  constructor() {
+  public timeseriesCounter: number;
 
+  constructor(
+    private timeseriesSrvc: TimeseriesService
+  ) {
+    this.timeseriesCounter = this.timeseriesSrvc.datasetIds.length;
   }
 }
