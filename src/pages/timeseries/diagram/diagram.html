@@ -16,5 +16,5 @@
 
 <ion-content padding>
   <n52-flot-timeseries-graph [datasetIds]="datasetIds" [datasetOptions]="datasetOptions" [timeInterval]="timespan" [graphOptions]="diagramOptions"
-    (onTimespanChanged)="timespanChanged($event)"></n52-flot-timeseries-graph>
+    (onTimespanChanged)="timespanChanged($event)" (onLoading)="isLoading($event)"></n52-flot-timeseries-graph>
 </ion-content>

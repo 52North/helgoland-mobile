@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DatasetOptions, PlotOptions, Timespan } from 'helgoland-toolbox';
-import { ModalController, NavController } from 'ionic-angular';
+import { Loading, LoadingController, ModalController, NavController } from 'ionic-angular';
 
 import { TimeseriesService } from '../timeseries.service';
 import { ModalLegendComponent } from './modal-legend/modal-legend';
@@ -17,6 +17,8 @@ export class TimeseriesDiagramPage {
 
   public timespan = new Timespan(new Date().getTime() - 100000000, new Date().getTime());
 
+  private loading: Loading;
+
   public diagramOptions: PlotOptions = {
     pan: {
       frameRate: 10,
@@ -29,7 +31,7 @@ export class TimeseriesDiagramPage {
     },
     yaxis: {
       additionalWidth: 17,
-      labelWidth: 50,
+      labelWidth: 40,
       min: null,
       panRange: false,
       show: true,
@@ -40,7 +42,8 @@ export class TimeseriesDiagramPage {
   constructor(
     public navCtrl: NavController,
     public timeseriesSrvc: TimeseriesService,
-    public modalCtrl: ModalController
+    public modalCtrl: ModalController,
+    public loadingCtrl: LoadingController
   ) {
     this.datasetIds = this.timeseriesSrvc.datasetIds;
     this.datasetOptions = this.timeseriesSrvc.datasetOptions;
@@ -64,5 +67,16 @@ export class TimeseriesDiagramPage {
       }
     })
     modal.present();
+  }
+
+  public isLoading(loading: boolean) {
+    if (loading) {
+      this.loading = this.loadingCtrl.create({
+        content: 'Please wait...'
+      });
+      this.loading.present();
+    } else {
+      this.loading.dismiss();
+    }
   }
 }
