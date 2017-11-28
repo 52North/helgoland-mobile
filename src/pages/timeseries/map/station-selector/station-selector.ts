@@ -35,6 +35,7 @@ export class StationSelectorComponent {
       option.generalize = true;
       this.timeseriesSrvc.addDataset(entry.internalId, option);
     });
+    this.viewCtrl.dismiss(true);
   }
 
   public dismiss() {

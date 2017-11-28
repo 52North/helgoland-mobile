@@ -23,12 +23,16 @@ export class TimeseriesMapPage {
   }
 
   public onStationSelected(platform: Platform) {
-    this.modalCtrl.create(StationSelectorComponent,
+    const modal = this.modalCtrl.create(StationSelectorComponent,
       {
         platform,
         providerUrl: this.selectedProvider.providerUrl
       }
-    ).present();
+    );
+    modal.onDidDismiss(data => {
+      if (data) { this.navCtrl.parent.select(0); }
+    });
+    modal.present();
   }
 
   public openProviderSelection() {
