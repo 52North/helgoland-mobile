@@ -1,11 +1,20 @@
-import { HttpClient } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { ApiInterface, GetDataApiInterface, Settings } from 'helgoland-toolbox';
+import {
+    ApiInterface,
+    CachingInterceptor,
+    GetDataApiInterface,
+    HttpCache,
+    LocalHttpCache,
+    LocalOngoingHttpCache,
+    OnGoingHttpCache,
+    Settings,
+} from 'helgoland-toolbox';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { ComponentsModule } from '../components/components.module';
@@ -43,7 +52,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     SplashScreen,
     { provide: ApiInterface, useClass: GetDataApiInterface },
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    { provide: Settings, useClass: SettingsService }
+    { provide: Settings, useClass: SettingsService },
+    { provide: HTTP_INTERCEPTORS, useClass: CachingInterceptor, multi: true },
+    { provide: HttpCache, useClass: LocalHttpCache },
+    { provide: OnGoingHttpCache, useClass: LocalOngoingHttpCache }
   ]
 })
 export class AppModule { }
