@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { DatasetOptions, PlotOptions, Timespan } from 'helgoland-toolbox';
 import { Loading, LoadingController, ModalController, NavController } from 'ionic-angular';
 
+import { ModalTimespanEditorComponent } from '../../../components/modal-timespan-editor/modal-timespan-editor';
 import { TimeseriesService } from '../timeseries.service';
 import { ModalLegendComponent } from './modal-legend/modal-legend';
 
 @Component({
-  selector: 'page-home',
+  selector: 'diagram-page',
   templateUrl: 'diagram.html'
 })
 export class TimeseriesDiagramPage {
@@ -55,16 +56,20 @@ export class TimeseriesDiagramPage {
     this.timespan = timespan;
   }
 
-  public openTimeEditor() {
-    debugger;
+  public openTimeSettings() {
+    const modal = this.modalCtrl.create(ModalTimespanEditorComponent, {
+      timespan: this.timespan
+    });
+    modal.onDidDismiss(timespan => {
+      if (timespan instanceof Timespan) this.timespanChanged(timespan);
+    });
+    modal.present();
   }
 
   public openLegend() {
     const modal = this.modalCtrl.create(ModalLegendComponent);
     modal.onDidDismiss(data => {
-      if (data instanceof Timespan) {
-        this.timespanChanged(data);
-      }
+      if (data instanceof Timespan) this.timespanChanged(data);
     })
     modal.present();
   }

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Change timespan
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item-group>
+      <ion-item-divider color="light">Custom</ion-item-divider>
+      <ion-item>
+        <ion-label>Start</ion-label>
+        <ion-datetime pickerFormat="DD.MM.YYYY HH:mm" [(ngModel)]="start"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>End</ion-label>
+        <ion-datetime pickerFormat="DD.MM.YYYY HH:mm" [(ngModel)]="end"></ion-datetime>
+      </ion-item>
+    </ion-item-group>
+    <!-- <ion-item-group>
+      <ion-item-divider color="light">Predefined</ion-item-divider>
+      <ion-item>
+        Test 1
+      </ion-item>
+      <ion-item>
+        Test 2
+      </ion-item>
+      <ion-item>
+        Test 3
+      </ion-item>
+    </ion-item-group> -->
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons end>
+      <button ion-button icon-right (click)="confirmTimespan()">
+        {{'controls.ok' | translate}}
+      </button>
+      <button ion-button icon-right (click)="dismiss()">
+        {{'controls.cancel' | translate}}
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

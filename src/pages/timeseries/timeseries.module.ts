@@ -5,6 +5,7 @@ import {
     HelgolandFlotGraphModule,
     HelgolandMapSelectorModule,
     HelgolandSelectorModule,
+    HelgolandTimeModule,
 } from 'helgoland-toolbox';
 import { IonicModule } from 'ionic-angular';
 
@@ -35,6 +36,7 @@ import { TimeseriesService } from './timeseries.service';
         HelgolandMapSelectorModule,
         HelgolandFlotGraphModule,
         HelgolandDatasetlistModule,
+        HelgolandTimeModule,
         TranslateModule.forChild(),
         ComponentsModule,
         IonicModule
