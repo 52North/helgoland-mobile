@@ -1,11 +1,52 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      List selection
     </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="openProviderSelection()">
+        {{'timeseries.map-selection.provider' | translate}}
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-navbar>
+    <div padding>
+      <ion-segment [(ngModel)]="type">
+        <ion-segment-button value="categorie">
+          Kategorie
+        </ion-segment-button>
+        <ion-segment-button value="station">
+          Station
+        </ion-segment-button>
+        <ion-segment-button value="phenomenon">
+          Phänomen
+        </ion-segment-button>
+        <ion-segment-button value="sensor">
+          Sensor
+        </ion-segment-button>
+      </ion-segment>
+    </div>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <div [ngSwitch]="type">
 
+    <div *ngSwitchCase="'categorie'">
+      <mobile-list-selector [parameters]="categoryParams" [selectorId]="'category'" [providerList]="providerList" (onDatasetSelection)="onDatasetSelected($event)"></mobile-list-selector>
+    </div>
+
+    <div *ngSwitchCase="'station'">
+      <mobile-list-selector [parameters]="stationParams" [selectorId]="'station'" [providerList]="providerList" (onDatasetSelection)="onDatasetSelected($event)"></mobile-list-selector>
+    </div>
+
+    <div *ngSwitchCase="'phenomenon'">
+      <mobile-list-selector [parameters]="phenomenonParams" [selectorId]="'phenomenon'" [providerList]="providerList" (onDatasetSelection)="onDatasetSelected($event)"></mobile-list-selector>
+    </div>
+
+    <div *ngSwitchCase="'sensor'">
+      <mobile-list-selector [parameters]="procedureParams" [selectorId]="'procedure'" [providerList]="providerList" (onDatasetSelection)="onDatasetSelected($event)"></mobile-list-selector>
+    </div>
+
+  </div>
 </ion-content>

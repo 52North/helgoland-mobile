@@ -1,0 +1,11 @@
+<ion-list>
+  <ion-item-group *ngFor="let param of parameters; let i = index">
+    <ion-item-divider color="light" (click)="selectedPanel(i)">
+      <span>{{param.header}}</span>
+      <span *ngIf="param.headerAddition">-</span>
+      <span>{{param.headerAddition}}</span>
+    </ion-item-divider>
+    <mobile-multi-service-filter-selector *ngIf="selectorId + '-' + i === activePanel" [endpoint]="param.type" [filterList]="param.filterList"
+      (onItemSelected)="itemSelected($event, i)"></mobile-multi-service-filter-selector>
+  </ion-item-group>
+</ion-list>

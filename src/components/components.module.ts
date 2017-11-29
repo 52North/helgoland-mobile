@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import {
-	HelgolandDepictionModule,
-	HelgolandMapViewModule,
-	HelgolandModificationModule,
-	HelgolandSelectorModule,
+    HelgolandDepictionModule,
+    HelgolandMapViewModule,
+    HelgolandModificationModule,
+    HelgolandSelectorModule,
 } from 'helgoland-toolbox';
 import { IonicModule } from 'ionic-angular';
 
+import { MobileListSelectorComponent } from './mobile-list-selector/mobile-list-selector';
+import {
+    MobileMultiServiceFilterSelectorComponent,
+} from './mobile-multi-service-filter-selector/mobile-multi-service-filter-selector';
 import { MobileProviderSelectorComponent } from './mobile-provider-selector/mobile-provider-selector';
 import { MobileTimeseriesEntryComponent } from './mobile-timeseries-entry/mobile-timeseries-entry';
 import { MobileTimespanShiftSelectorComponent } from './mobile-timespan-shift-selector/mobile-timespan-shift-selector';
@@ -24,7 +28,9 @@ import { ModalTimespanEditorComponent } from './modal-timespan-editor/modal-time
 		ModalGeometryViewerComponent,
 		ModalOptionsEditorComponent,
 		MobileTimespanShiftSelectorComponent,
-		ModalTimespanEditorComponent
+		ModalTimespanEditorComponent,
+		MobileListSelectorComponent,
+    MobileMultiServiceFilterSelectorComponent
 	],
 	imports: [
 		IonicModule,
@@ -47,7 +53,9 @@ import { ModalTimespanEditorComponent } from './modal-timespan-editor/modal-time
 		ModalGeometryViewerComponent,
 		ModalOptionsEditorComponent,
 		MobileTimespanShiftSelectorComponent,
-		ModalTimespanEditorComponent
+		ModalTimespanEditorComponent,
+		MobileListSelectorComponent,
+    MobileMultiServiceFilterSelectorComponent
 	]
 })
 export class ComponentsModule { }

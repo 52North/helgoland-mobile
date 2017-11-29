@@ -1,0 +1,9 @@
+<ion-list inset>
+  <ion-item text-center *ngIf="loading > 0">
+    <span class="glyphicon glyphicon-refresh icon-spin"></span>
+    <span translate="listSelection.loading"></span>
+  </ion-item>
+  <ion-item *ngFor="let item of items" (click)="onSelectItem(item)">
+    <n52-label-mapper label="{{item.label}}"></n52-label-mapper>
+  </ion-item>
+</ion-list>
