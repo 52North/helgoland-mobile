@@ -40,26 +40,26 @@
         <ion-icon name="trash" item-end (click)="removeDataset(); $event.stopPropagation();"></ion-icon>
       </ion-col>
     </ion-row>
-    <ion-row *ngIf="informationVisible">
+    <div *ngIf="informationVisible">
       <div *ngIf="firstValue" (click)="jumpToFirstTimeStamp(); $event.stopPropagation();">
         <ion-icon name="arrow-forward"></ion-icon>
         <span>Erster Wert bei</span>
         <span>{{firstValue.timestamp| date: 'dd.MM.yy HH:mm'}}</span>
-        <span class="hidden-medium">({{firstValue.value}} {{uom}})</span>
+        <span>({{firstValue.value}} {{uom}})</span>
       </div>
       <div *ngIf="lastValue" (click)="jumpToLastTimeStamp(); $event.stopPropagation();">
         <ion-icon name="arrow-forward"></ion-icon>
         <span>Letzter Wert bei</span>
         <span>{{lastValue.timestamp| date: 'dd.MM.yy HH:mm'}}</span>
-        <span class="hidden-medium">({{lastValue.value}} {{uom}})</span>
+        <span>({{lastValue.value}} {{uom}})</span>
       </div>
       <div *ngIf="dataset?.referenceValues">
-        <div class="additionalLegendEntry" *ngFor="let ref of dataset.referenceValues" (click)="toggleReferenceValue(ref); $event.stopPropagation();"
-          [ngClass]="{'selected': ref.visible}" [ngStyle]="{color: ref.color}">
+        <div *ngFor="let ref of dataset.referenceValues" (click)="toggleReferenceValue(ref); $event.stopPropagation();"
+          [ngClass]="{'ref-value-selected': ref.visible}" [ngStyle]="{color: ref.color}">
           <ion-icon name="arrow-forward"></ion-icon>
           <span>{{ref.label}}</span>
         </div>
       </div>
-    </ion-row>
+    </div>
   </ion-item>
 </ion-list>
