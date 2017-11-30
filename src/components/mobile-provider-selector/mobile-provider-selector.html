@@ -1,5 +1,5 @@
 <ion-list>
-  <ion-list-header *ngIf="loadingCount">
+  <ion-list-header *ngIf="loadingCount" text-center>
     <span>Requesting {{loadingCount}} services...</span>
   </ion-list-header>
   <ion-item *ngFor="let provider of providers">

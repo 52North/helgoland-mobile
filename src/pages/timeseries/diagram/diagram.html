@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>Diagram</ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="openLegend()">
@@ -10,8 +10,14 @@
 </ion-header>
 
 <ion-content padding>
-  <n52-flot-timeseries-graph [datasetIds]="datasetIds" [datasetOptions]="datasetOptions" [timeInterval]="timespan" [graphOptions]="diagramOptions"
-    (onTimespanChanged)="timespanChanged($event)" (onLoading)="isLoading($event)"></n52-flot-timeseries-graph>
+  <div class="diagram-view">
+    <n52-flot-timeseries-graph [datasetIds]="datasetIds" [datasetOptions]="datasetOptions" [timeInterval]="timespan" [graphOptions]="diagramOptions"
+      (onTimespanChanged)="timespanChanged($event)" (onLoading)="loading = $event"></n52-flot-timeseries-graph>
+    <div class="loading" *ngIf="loading">
+      <ion-spinner item-start name="circles"></ion-spinner>
+      <span>loading...</span>
+    </div>
+  </div>
 </ion-content>
 
 <ion-footer>
