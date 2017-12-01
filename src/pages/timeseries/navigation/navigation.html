@@ -1,4 +1,4 @@
-<ion-tabs>
+<ion-tabs #tabs>
   <ion-tab [root]="diagramPage" tabTitle="Diagram" tabBadge="{{timeseriesSrvc.datasetIds.length > 0 ? timeseriesSrvc.datasetIds.length : ''}}" tabIcon="hl-icon-diagram-view"></ion-tab>
   <ion-tab [root]="mapPage" tabTitle="Map" tabIcon="hl-icon-map-view"></ion-tab>
   <ion-tab [root]="listPage" tabTitle="List" tabIcon="hl-icon-list-view"></ion-tab>

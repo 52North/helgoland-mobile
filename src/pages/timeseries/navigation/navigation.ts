@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { Tabs } from 'ionic-angular';
 
 import { TimeseriesDiagramPage } from '../diagram/diagram';
 import { TimeseriesListPage } from '../list/list';
@@ -14,11 +15,19 @@ export class TimeseriesNavigationPage {
   mapPage = TimeseriesMapPage;
   listPage = TimeseriesListPage;
 
+  @ViewChild('tabs')
+  private tabRef: Tabs;
+
   public timeseriesCounter: number;
 
   constructor(
     private timeseriesSrvc: TimeseriesService
-  ) {
-    this.timeseriesCounter = this.timeseriesSrvc.datasetIds.length;
+  ) { }
+
+  ionViewDidEnter(): void {
+    if (this.timeseriesSrvc.datasetIds.length === 0) {
+      this.tabRef.select(1);
+    }
   }
+
 }

@@ -10,13 +10,25 @@
 </ion-header>
 
 <ion-content padding>
-  <div class="diagram-view">
+  <div class="diagram-view" *ngIf="datasetIds.length > 0">
     <n52-flot-timeseries-graph [datasetIds]="datasetIds" [datasetOptions]="datasetOptions" [timeInterval]="timespan" [graphOptions]="diagramOptions"
       (onTimespanChanged)="timespanChanged($event)" (onLoading)="loading = $event"></n52-flot-timeseries-graph>
     <div class="loading" *ngIf="loading">
       <ion-spinner item-start name="circles"></ion-spinner>
       <span>loading...</span>
     </div>
+  </div>
+  <div *ngIf="datasetIds.length === 0">
+    <ion-card>
+      <ion-card-header text-center>
+        No timeseries selected!
+      </ion-card-header>
+      <ion-card-content>
+        <div text-center>Please select timeseries by:</div>
+        <button ion-button block outline (click)="openMapSelection()">Map</button>
+        <button ion-button block outline (click)="openListSelection()">List</button>
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>
 

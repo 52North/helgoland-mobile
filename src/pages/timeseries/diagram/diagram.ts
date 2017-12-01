@@ -84,4 +84,12 @@ export class TimeseriesDiagramPage {
       this.loading.dismiss();
     }
   }
+
+  public openMapSelection () {
+    this.navCtrl.parent.select(1);
+  }
+
+  public openListSelection () {
+    this.navCtrl.parent.select(2);
+  }
 }
