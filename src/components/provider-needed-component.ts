@@ -1,4 +1,4 @@
-import { Service } from 'helgoland-toolbox';
+import { Service, Settings, SettingsService } from 'helgoland-toolbox';
 import { ModalController } from 'ionic-angular';
 
 import { ModalProviderSelectorComponent } from './modal-provider-selector/modal-provider-selector';
@@ -8,7 +8,8 @@ export class ProviderNeededComponent {
     public selectedProvider: Service;
 
     constructor(
-        public modalCtrl: ModalController
+        public modalCtrl: ModalController,
+        public settingsSrvc: SettingsService<Settings>
     ) { }
 
     public ionViewDidEnter() {
@@ -20,7 +21,8 @@ export class ProviderNeededComponent {
     public openProviderSelection() {
         const modal = this.modalCtrl.create(ModalProviderSelectorComponent,
             {
-                selectedProvider: this.selectedProvider
+                selectedProvider: this.selectedProvider,
+                providerList: this.settingsSrvc.getSettings().restApiUrls
             },
             {
                 showBackdrop: false,

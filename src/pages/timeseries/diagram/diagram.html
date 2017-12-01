@@ -12,8 +12,8 @@
 <ion-content padding>
   <div class="diagram-view" *ngIf="datasetIds.length > 0">
     <n52-flot-timeseries-graph [datasetIds]="datasetIds" [datasetOptions]="datasetOptions" [timeInterval]="timespan" [graphOptions]="diagramOptions"
-      (onTimespanChanged)="timespanChanged($event)" (onLoading)="loading = $event"></n52-flot-timeseries-graph>
-    <div class="loading" *ngIf="loading">
+      (onTimespanChanged)="timespanChanged($event)" (onContentLoading)="loading = $event"></n52-flot-timeseries-graph>
+    <div class="loading-overlay" *ngIf="loading">
       <ion-spinner item-start name="circles"></ion-spinner>
       <span>loading...</span>
     </div>

@@ -39,7 +39,6 @@ export class ModalLegendComponent {
   }
 
   public updateOptions(options: DatasetOptions, internalId: string) {
-    debugger;
     this.timeseriesSrvc.updateDatasetOptions(options, internalId);
     this.dismiss();
   }

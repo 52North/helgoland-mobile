@@ -13,14 +13,14 @@ import {
     LocalHttpCache,
     LocalOngoingHttpCache,
     OnGoingHttpCache,
-    Settings,
+    SettingsService,
 } from 'helgoland-toolbox';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { ComponentsModule } from '../components/components.module';
 import { TimeseriesModule } from '../pages/timeseries/timeseries.module';
 import { MyApp } from './app.component';
-import { SettingsService } from './services/settings.service';
+import { JSSONSettingsService } from './services/settings.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -52,7 +52,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     SplashScreen,
     { provide: ApiInterface, useClass: GetDataApiInterface },
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    { provide: Settings, useClass: SettingsService },
+    { provide: SettingsService, useClass: JSSONSettingsService },
     { provide: HTTP_INTERCEPTORS, useClass: CachingInterceptor, multi: true },
     { provide: HttpCache, useClass: LocalHttpCache },
     { provide: OnGoingHttpCache, useClass: LocalOngoingHttpCache }

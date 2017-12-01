@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DatasetOptions, PlotOptions, Timespan } from 'helgoland-toolbox';
-import { Loading, LoadingController, ModalController, NavController } from 'ionic-angular';
+import { ModalController, NavController } from 'ionic-angular';
 
 import { ModalTimespanEditorComponent } from '../../../components/modal-timespan-editor/modal-timespan-editor';
 import { TimeseriesService } from '../timeseries.service';
@@ -17,8 +17,6 @@ export class TimeseriesDiagramPage {
   public datasetOptions: Map<string, DatasetOptions> = new Map();
 
   public timespan = new Timespan(new Date().getTime() - 100000000, new Date().getTime());
-
-  private loading: Loading;
 
   public diagramOptions: PlotOptions = {
     pan: {
@@ -44,7 +42,6 @@ export class TimeseriesDiagramPage {
     public navCtrl: NavController,
     public timeseriesSrvc: TimeseriesService,
     public modalCtrl: ModalController,
-    public loadingCtrl: LoadingController
   ) {
     this.datasetIds = this.timeseriesSrvc.datasetIds;
     this.datasetOptions = this.timeseriesSrvc.datasetOptions;
@@ -72,17 +69,6 @@ export class TimeseriesDiagramPage {
       if (data instanceof Timespan) this.timespanChanged(data);
     })
     modal.present();
-  }
-
-  public isLoading(loading: boolean) {
-    if (loading) {
-      this.loading = this.loadingCtrl.create({
-        content: 'Please wait...'
-      });
-      this.loading.present();
-    } else {
-      this.loading.dismiss();
-    }
   }
 
   public openMapSelection () {

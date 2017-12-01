@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IDataset, ListSelectorParameter, Provider, Service } from 'helgoland-toolbox';
+import { IDataset, ListSelectorParameter, Provider, Service, Settings, SettingsService } from 'helgoland-toolbox';
 import { ModalController, NavController } from 'ionic-angular';
 
 import { ProviderNeededComponent } from '../../../components/provider-needed-component';
@@ -74,9 +74,10 @@ export class TimeseriesListPage extends ProviderNeededComponent {
   constructor(
     public navCtrl: NavController,
     public modalCtrl: ModalController,
-    public timeseriesSrvc: TimeseriesService
+    public timeseriesSrvc: TimeseriesService,
+    public settingsSrvc: SettingsService<Settings>
   ) {
-    super(modalCtrl);
+    super(modalCtrl, settingsSrvc);
   }
 
   public setSelectedProvider(service: Service) {
