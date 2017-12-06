@@ -20,6 +20,10 @@ export class ModalTimespanEditorComponent {
     this.end = new Date(timespan.to).toISOString();
   }
 
+  public onTimespanSelected(timespan: Timespan) {
+    this.viewCtrl.dismiss(timespan);
+  }
+
   public dismiss() {
     this.viewCtrl.dismiss();
   }

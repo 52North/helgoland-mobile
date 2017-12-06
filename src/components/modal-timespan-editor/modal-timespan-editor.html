@@ -18,18 +18,39 @@
         <ion-datetime pickerFormat="DD.MM.YYYY HH:mm" [(ngModel)]="end"></ion-datetime>
       </ion-item>
     </ion-item-group>
-    <!-- <ion-item-group>
+    <ion-item-group>
       <ion-item-divider color="light">Predefined</ion-item-divider>
       <ion-item>
-        Test 1
+        <mobile-timespan-button predefined="last_hour" label="Last Hour" (onTimespanSelected)="onTimespanSelected($event)"></mobile-timespan-button>
       </ion-item>
       <ion-item>
-        Test 2
+        <mobile-timespan-button predefined="today" label="Today" (onTimespanSelected)="onTimespanSelected($event)"></mobile-timespan-button>
       </ion-item>
       <ion-item>
-        Test 3
+        <mobile-timespan-button predefined="yesterday" label="Yesterday" (onTimespanSelected)="onTimespanSelected($event)"></mobile-timespan-button>
       </ion-item>
-    </ion-item-group> -->
+      <ion-item>
+        <mobile-timespan-button predefined="today_yesterday" label="Today & Yesterday" (onTimespanSelected)="onTimespanSelected($event)"></mobile-timespan-button>
+      </ion-item>
+      <ion-item>
+        <mobile-timespan-button predefined="current_week" label="Current Week" (onTimespanSelected)="onTimespanSelected($event)"></mobile-timespan-button>
+      </ion-item>
+      <ion-item>
+        <mobile-timespan-button predefined="last_week" label="Last Week" (onTimespanSelected)="onTimespanSelected($event)"></mobile-timespan-button>
+      </ion-item>
+      <ion-item>
+        <mobile-timespan-button predefined="current_month" label="Current Month" (onTimespanSelected)="onTimespanSelected($event)"></mobile-timespan-button>
+      </ion-item>
+      <ion-item>
+        <mobile-timespan-button predefined="last_month" label="Last Month" (onTimespanSelected)="onTimespanSelected($event)"></mobile-timespan-button>
+      </ion-item>
+      <ion-item>
+        <mobile-timespan-button predefined="current_year" label="Current Year" (onTimespanSelected)="onTimespanSelected($event)"></mobile-timespan-button>
+      </ion-item>
+      <ion-item>
+        <mobile-timespan-button predefined="last_year" label="Last Year" (onTimespanSelected)="onTimespanSelected($event)"></mobile-timespan-button>
+      </ion-item>
+    </ion-item-group>
   </ion-list>
 </ion-content>
 <ion-footer>

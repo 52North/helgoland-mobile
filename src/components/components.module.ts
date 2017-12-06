@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import {
-    HelgolandDepictionModule,
-    HelgolandMapViewModule,
-    HelgolandModificationModule,
-    HelgolandSelectorModule,
+	HelgolandDepictionModule,
+	HelgolandMapViewModule,
+	HelgolandModificationModule,
+	HelgolandSelectorModule,
+	HelgolandTimeModule,
 } from 'helgoland-toolbox';
 import { IonicModule } from 'ionic-angular';
 
 import { MobileListSelectorComponent } from './mobile-list-selector/mobile-list-selector';
 import {
-    MobileMultiServiceFilterSelectorComponent,
+	MobileMultiServiceFilterSelectorComponent,
 } from './mobile-multi-service-filter-selector/mobile-multi-service-filter-selector';
 import { MobileProviderSelectorComponent } from './mobile-provider-selector/mobile-provider-selector';
 import { MobileTimeseriesEntryComponent } from './mobile-timeseries-entry/mobile-timeseries-entry';
+import { MobileTimespanButtonComponent } from './mobile-timespan-button/mobile-timespan-button';
 import { MobileTimespanShiftSelectorComponent } from './mobile-timespan-shift-selector/mobile-timespan-shift-selector';
 import { ModalGeometryViewerComponent } from './modal-geometry-viewer/modal-geometry-viewer';
 import { ModalOptionsEditorComponent } from './modal-options-editor/modal-options-editor';
@@ -30,13 +32,15 @@ import { ModalTimespanEditorComponent } from './modal-timespan-editor/modal-time
 		MobileTimespanShiftSelectorComponent,
 		ModalTimespanEditorComponent,
 		MobileListSelectorComponent,
-    MobileMultiServiceFilterSelectorComponent
+		MobileMultiServiceFilterSelectorComponent,
+		MobileTimespanButtonComponent
 	],
 	imports: [
 		IonicModule,
 		HelgolandSelectorModule,
 		HelgolandDepictionModule,
 		HelgolandMapViewModule,
+		HelgolandTimeModule,
 		HelgolandModificationModule,
 		TranslateModule.forChild(),
 	],
@@ -55,7 +59,8 @@ import { ModalTimespanEditorComponent } from './modal-timespan-editor/modal-time
 		MobileTimespanShiftSelectorComponent,
 		ModalTimespanEditorComponent,
 		MobileListSelectorComponent,
-    MobileMultiServiceFilterSelectorComponent
+		MobileMultiServiceFilterSelectorComponent,
+		MobileTimespanButtonComponent
 	]
 })
 export class ComponentsModule { }
