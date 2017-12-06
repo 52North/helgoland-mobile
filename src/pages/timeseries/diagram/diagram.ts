@@ -41,7 +41,7 @@ export class TimeseriesDiagramPage {
   constructor(
     public navCtrl: NavController,
     public timeseriesSrvc: TimeseriesService,
-    public modalCtrl: ModalController,
+    public modalCtrl: ModalController
   ) {
     this.datasetIds = this.timeseriesSrvc.datasetIds;
     this.datasetOptions = this.timeseriesSrvc.datasetOptions;
@@ -71,11 +71,11 @@ export class TimeseriesDiagramPage {
     modal.present();
   }
 
-  public openMapSelection () {
+  public openMapSelection() {
     this.navCtrl.parent.select(1);
   }
 
-  public openListSelection () {
+  public openListSelection() {
     this.navCtrl.parent.select(2);
   }
 }

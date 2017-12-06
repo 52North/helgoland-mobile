@@ -1,6 +1,7 @@
 {
 	"controls": {
 		"cancel": "Cancel",
+		"close": "Close",
 		"ok": "Ok"
 	},
 	"favorite": {
@@ -23,6 +24,7 @@
 	},
 	"provider-selector": {
 		"datasets": "Datasets",
+		"loading": "Requesting {{loadingCount}} services...",
 		"phenomena": "Phenomena",
 		"platforms": "Platforms",
 		"service-url": "Service-Url",
@@ -30,13 +32,61 @@
 		"timeseries": "Timeseries"
 	},
 	"timeseries": {
+		"change-timespan": {
+			"custom": {
+				"end": "End",
+				"header": "Custom timespan",
+				"start": "Start"
+			},
+			"header": "Change timespan",
+			"predefined": {
+				"current-month": "Current month",
+				"current-week": "Current week",
+				"current-year": "Current year",
+				"header": "Predefined timespan",
+				"last-hour": "Last hour",
+				"last-month": "Last month",
+				"last-week": "Last week",
+				"last-year": "Last year",
+				"today": "Today",
+				"today-yesterday": "Today & Yesterday",
+				"yesterday": "Yesterday"
+			}
+		},
+		"diagram": {
+			"header": "Diagram",
+			"legend": {
+				"header": "Legend"
+			},
+			"loading": "loading",
+			"no-timeseries-selected": "No timeseries selected!",
+			"select-timeseries": "Please select timeseries by"
+		},
+		"legend": {
+			"first-value-at": "First value at",
+			"last-value-at": "Last value at"
+		},
+		"list-selection": {
+			"category": "Category",
+			"header": "List-Selection",
+			"phenomenon": "Phenomenon",
+			"provider": "Provider",
+			"sensor": "Sensor",
+			"station": "Station"
+		},
 		"map-selection": {
 			"dataset-selection-hint": "Please select one or more timeseries to display in diagram",
-			"header": "Map",
+			"header": "Map-Selection",
+			"loading": "loading",
 			"provider": "Provider",
 			"show-in-diagram": "Show {{value}} timeseries in diagram"
 		},
-		"show-geometry-header": "Position of the station",
+		"select-provider": {
+			"header": "Select provider"
+		},
+		"show-geometry": {
+			"header": "Position of the station"
+		},
 		"style-edit": {
 			"generalize": "Generalize data",
 			"header": "Change style of this timeseries",

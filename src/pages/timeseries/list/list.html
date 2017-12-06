@@ -1,11 +1,11 @@
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>
-      List selection
+      {{'timeseries.list-selection.header' | translate}}
     </ion-title>
     <ion-buttons end>
       <button ion-button (click)="openProviderSelection()">
-        {{'timeseries.map-selection.provider' | translate}}
+        {{'timeseries.list-selection.provider' | translate}}
       </button>
     </ion-buttons>
   </ion-navbar>
@@ -13,16 +13,16 @@
     <div padding>
       <ion-segment [(ngModel)]="type" color="n52Inverted">
         <ion-segment-button value="categorie">
-          Kategorie
+          {{'timeseries.list-selection.category' | translate}}
         </ion-segment-button>
         <ion-segment-button value="station">
-          Station
+          {{'timeseries.list-selection.station' | translate}}
         </ion-segment-button>
         <ion-segment-button value="phenomenon">
-          Phänomen
+          {{'timeseries.list-selection.phenomenon' | translate}}
         </ion-segment-button>
         <ion-segment-button value="sensor">
-          Sensor
+          {{'timeseries.list-selection.sensor' | translate}}
         </ion-segment-button>
       </ion-segment>
     </div>

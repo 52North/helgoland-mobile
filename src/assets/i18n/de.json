@@ -1,6 +1,7 @@
 {
 	"controls": {
 		"cancel": "Cancel",
+		"close": "Schließen",
 		"ok": "Ok"
 	},
 	"favorite": {
@@ -23,6 +24,7 @@
 	},
 	"provider-selector": {
 		"datasets": "Datensätze",
+		"loading": "Lade {{loadingCount}} Anbieter...",
 		"phenomena": "Phänomene",
 		"platforms": "Platformen",
 		"service-url": "Service-Url",
@@ -30,13 +32,61 @@
 		"timeseries": "Zeitreihen"
 	},
 	"timeseries": {
+		"change-timespan": {
+			"custom": {
+				"end": "Ende",
+				"header": "Freier Zeitraum",
+				"start": "Start"
+			},
+			"header": "Ändere Zeitraum",
+			"predefined": {
+				"current-month": "Derzeitiger Monat",
+				"current-week": "Derzeitige Woche",
+				"current-year": "Derzeitiges Jahr",
+				"header": "Vordefinierter Zeitraum",
+				"last-hour": "Letzte Stunde",
+				"last-month": "Letzter Monat",
+				"last-week": "Letzte Woche",
+				"last-year": "Letztes Jahr",
+				"today": "Heute",
+				"today-yesterday": "Heute und gestern",
+				"yesterday": "Gestern"
+			}
+		},
+		"diagram": {
+			"header": "Diagramm",
+			"legend": {
+				"header": "Legend"
+			},
+			"loading": "Lade",
+			"no-timeseries-selected": "No timeseries selected!",
+			"select-timeseries": "Please select timeseries by"
+		},
+		"legend": {
+			"first-value-at": "Erster Wert am",
+			"last-value-at": "Letzter Wert am"
+		},
+		"list-selection": {
+			"category": "Kategorie",
+			"header": "Listenauswahl",
+			"phenomenon": "Phänomen",
+			"provider": "Anbieter",
+			"sensor": "Sensor",
+			"station": "Station"
+		},
 		"map-selection": {
 			"dataset-selection-hint": "Bitte wählen Sie eine oder mehrere Zeitreihen zur Darstellung aus",
-			"header": "Karte",
-			"provider": "Provider",
+			"header": "Kartenauswahl",
+			"loading": "Lade",
+			"provider": "Anbieter",
 			"show-in-diagram": "Zeige {{value}} Zeitreihen im Diagramm"
 		},
-		"show-geometry-header": "Position der Station",
+		"select-provider": {
+			"header": "Wähle Anbieter"
+		},
+		"show-geometry": {
+			"header": "Position der Station"
+		},
 		"style-edit": {
 			"generalize": "Daten generalisieren",
 			"header": "Zeitreihenerscheinung ändern",
