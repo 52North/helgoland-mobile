@@ -2,5 +2,7 @@
   "name": "helgoland-mobile",
   "app_id": "469c9923",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }
