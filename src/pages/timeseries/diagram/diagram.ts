@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { DatasetOptions, PlotOptions, Timespan } from 'helgoland-toolbox';
-import { ModalController, NavController } from 'ionic-angular';
+import { ModalController } from 'ionic-angular';
 
 import { ModalTimespanEditorComponent } from '../../../components/modal-timespan-editor/modal-timespan-editor';
+import { Page, TimeseriesNavigator } from '../navigation/navigation.service';
 import { TimeseriesService } from '../timeseries.service';
 import { ModalLegendComponent } from './modal-legend/modal-legend';
 
@@ -39,13 +40,13 @@ export class TimeseriesDiagramPage {
   };
 
   constructor(
-    public navCtrl: NavController,
-    public timeseriesSrvc: TimeseriesService,
-    public modalCtrl: ModalController
+    private timeseriesSrvc: TimeseriesService,
+    private modalCtrl: ModalController,
+    private navigator: TimeseriesNavigator
   ) {
     this.datasetIds = this.timeseriesSrvc.datasetIds;
     this.datasetOptions = this.timeseriesSrvc.datasetOptions;
-    this.timespan = this.timeseriesSrvc.timespan;
+    this.timeseriesSrvc.onTimespanChanged.subscribe(timespan => this.timespan = timespan);
   }
 
   public timespanChanged(timespan: Timespan) {
@@ -72,10 +73,10 @@ export class TimeseriesDiagramPage {
   }
 
   public openMapSelection() {
-    this.navCtrl.parent.select(1);
+    this.navigator.navigate(Page.Map);
   }
 
   public openListSelection() {
-    this.navCtrl.parent.select(2);
+    this.navigator.navigate(Page.List);
   }
 }

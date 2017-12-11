@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IDataset, ListSelectorParameter, Provider, Service, Settings, SettingsService } from 'helgoland-toolbox';
-import { ModalController, NavController } from 'ionic-angular';
+import { ModalController } from 'ionic-angular';
 
 import { ProviderNeededComponent } from '../../../components/provider-needed-component';
+import { Page, TimeseriesNavigator } from '../navigation/navigation.service';
 import { TimeseriesService } from '../timeseries.service';
 
 @Component({
@@ -72,10 +73,10 @@ export class TimeseriesListPage extends ProviderNeededComponent {
   }];
 
   constructor(
-    public navCtrl: NavController,
     public modalCtrl: ModalController,
     public timeseriesSrvc: TimeseriesService,
-    public settingsSrvc: SettingsService<Settings>
+    public settingsSrvc: SettingsService<Settings>,
+    private navigator: TimeseriesNavigator
   ) {
     super(modalCtrl, settingsSrvc);
   }
@@ -92,7 +93,7 @@ export class TimeseriesListPage extends ProviderNeededComponent {
     if (datasetList instanceof Array) {
       datasetList.forEach(entry => {
         this.timeseriesSrvc.addDataset(entry.internalId);
-        this.navCtrl.parent.select(0);
+        this.navigator.navigate(Page.Diagram);
       })
     }
   }

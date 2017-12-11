@@ -19,6 +19,7 @@ import {
 import { TimeseriesMapPage } from './map/map';
 import { StationSelectorComponent } from './map/station-selector/station-selector';
 import { TimeseriesNavigationPage } from './navigation/navigation';
+import { TimeseriesNavigator } from './navigation/navigation.service';
 import { TimeseriesService } from './timeseries.service';
 
 @NgModule({
@@ -51,7 +52,8 @@ import { TimeseriesService } from './timeseries.service';
         ModalLegendComponent
     ],
     providers: [
-        TimeseriesService
+        TimeseriesService,
+        TimeseriesNavigator
     ]
 })
 export class TimeseriesModule { }

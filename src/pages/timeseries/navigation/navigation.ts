@@ -5,6 +5,7 @@ import { TimeseriesDiagramPage } from '../diagram/diagram';
 import { TimeseriesListPage } from '../list/list';
 import { TimeseriesService } from '../timeseries.service';
 import { TimeseriesMapPage } from './../map/map';
+import { Page, TimeseriesNavigator } from './navigation.service';
 
 @Component({
   templateUrl: 'navigation.html'
@@ -21,13 +22,12 @@ export class TimeseriesNavigationPage {
   public timeseriesCounter: number;
 
   constructor(
-    private timeseriesSrvc: TimeseriesService
-  ) { }
-
-  ionViewDidEnter(): void {
-    if (this.timeseriesSrvc.datasetIds.length === 0) {
-      this.tabRef.select(1);
-    }
+    public timeseriesSrvc: TimeseriesService,
+    private timeseriesNavigator: TimeseriesNavigator
+  ) {
+    this.timeseriesNavigator.selectedTabEvent.subscribe((page: Page) => {
+      this.tabRef.select(page);
+    });
   }
 
 }

@@ -63,7 +63,7 @@ export class ModalLegendComponent {
   }
 
   public jumpToDate(date: Date) {
-    const timespan = this.timeSrvc.centerTimespan(this.timeseriesSrvc.timespan, date);
+    const timespan = this.timeSrvc.centerTimespan(this.timeseriesSrvc.getTimespan(), date);
     this.viewCtrl.dismiss(timespan);
   }
 

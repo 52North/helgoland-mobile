@@ -1,8 +1,9 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { Platform, Settings, SettingsService } from 'helgoland-toolbox';
-import { ModalController, NavController } from 'ionic-angular';
+import { ModalController } from 'ionic-angular';
 
 import { ProviderNeededComponent } from '../../../components/provider-needed-component';
+import { Page, TimeseriesNavigator } from '../navigation/navigation.service';
 import { StationSelectorComponent } from './station-selector/station-selector';
 
 @Component({
@@ -14,7 +15,7 @@ export class TimeseriesMapPage extends ProviderNeededComponent {
   public loading: boolean;
 
   constructor(
-    public navCtrl: NavController,
+    private navigator: TimeseriesNavigator,
     public modalCtrl: ModalController,
     public settingsSrvc: SettingsService<Settings>,
     public cdr: ChangeDetectorRef
@@ -30,7 +31,7 @@ export class TimeseriesMapPage extends ProviderNeededComponent {
       }
     );
     modal.onDidDismiss(data => {
-      if (data) { this.navCtrl.parent.select(0); }
+      if (data) { this.navigator.navigate(Page.Diagram); }
     });
     modal.present();
   }

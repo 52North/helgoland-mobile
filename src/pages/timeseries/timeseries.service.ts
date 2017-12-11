@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { ColorService, DatasetOptions, DatasetService, LocalStorage, Time, Timespan } from 'helgoland-toolbox';
 
 const TIMESERIES_OPTIONS_CACHE_PARAM = 'timeseriesOptions';
@@ -8,7 +8,8 @@ const TIME_CACHE_PARAM = 'timeseriesTime';
 @Injectable()
 export class TimeseriesService extends DatasetService<DatasetOptions> {
 
-    public timespan: Timespan;
+    public onTimespanChanged: EventEmitter<Timespan> = new EventEmitter();
+    private timespan: Timespan;
 
     constructor(
         protected localStorage: LocalStorage,
@@ -27,7 +28,12 @@ export class TimeseriesService extends DatasetService<DatasetOptions> {
 
     public setTimespan(timespan: Timespan) {
         this.timespan = timespan;
+        this.onTimespanChanged.emit(timespan);
         this.saveState();
+    }
+
+    public getTimespan(): Timespan {
+        return this.timespan;
     }
 
     protected saveState(): void {
