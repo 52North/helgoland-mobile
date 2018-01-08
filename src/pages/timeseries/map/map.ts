@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
-import { Platform, Settings, SettingsService } from 'helgoland-toolbox';
+import { ParameterFilter, Platform, Service, Settings, SettingsService } from 'helgoland-toolbox';
 import { ModalController } from 'ionic-angular';
 
 import { ProviderNeededComponent } from '../../../components/provider-needed-component';
@@ -13,6 +13,7 @@ import { StationSelectorComponent } from './station-selector/station-selector';
 export class TimeseriesMapPage extends ProviderNeededComponent {
 
   public loading: boolean;
+  public stationFilter: ParameterFilter;
 
   constructor(
     private navigator: TimeseriesNavigator,
@@ -39,5 +40,12 @@ export class TimeseriesMapPage extends ProviderNeededComponent {
   public onMapLoading(loading: boolean) {
     this.loading = loading;
     this.cdr.detectChanges();
+  }
+
+  public setSelectedProvider(service: Service) {
+    super.setSelectedProvider(service);
+    this.stationFilter = {
+      service: service.id
+    }
   }
 }
