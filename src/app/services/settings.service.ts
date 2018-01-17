@@ -3,12 +3,27 @@ import { Settings, SettingsService } from 'helgoland-toolbox';
 
 export class MobileSettings extends Settings { }
 
+export let settings: MobileSettings;
+
+export const settingsPromise = new Promise<MobileSettings>((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', './assets/settings.json');
+    xhr.onload = () => {
+        if (xhr.status === 200) {
+            settings = JSON.parse(xhr.responseText);
+            resolve(settings);
+        } else {
+            reject('Cannot load configuration');
+        }
+    };
+    xhr.send();
+});
+
 @Injectable()
 export class JSSONSettingsService extends SettingsService<MobileSettings> {
 
     constructor() {
         super();
-        const settings = require('../../assets/settings.json');
         this.setSettings(settings);
     }
 
