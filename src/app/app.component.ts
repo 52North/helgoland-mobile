@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
+import { SettingsService } from '@helgoland/core';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { TranslateService } from '@ngx-translate/core';
-import { SettingsService } from 'helgoland-toolbox/dist';
 import { Platform } from 'ionic-angular';
 
 import { TimeseriesNavigationPage } from '../pages/timeseries/navigation/navigation';

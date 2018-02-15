@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IDataset, ListSelectorParameter, Provider, Service, Settings, SettingsService } from 'helgoland-toolbox';
+import { IDataset, Provider, Service, Settings, SettingsService } from '@helgoland/core';
+import { ListSelectorParameter } from '@helgoland/selector';
 import { ModalController } from 'ionic-angular';
 
 import { ProviderNeededComponent } from '../../../components/provider-needed-component';

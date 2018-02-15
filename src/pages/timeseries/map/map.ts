@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
-import { ParameterFilter, Platform, Service, Settings, SettingsService } from 'helgoland-toolbox';
+import { ParameterFilter, Platform, Service, Settings, SettingsService } from '@helgoland/core';
 import { ModalController } from 'ionic-angular';
 
 import { ProviderNeededComponent } from '../../../components/provider-needed-component';

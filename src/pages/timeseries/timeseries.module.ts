@@ -1,12 +1,8 @@
 import { NgModule } from '@angular/core';
+import { HelgolandDatasetlistModule } from '@helgoland/depiction/datasetlist';
+import { HelgolandFlotModule } from '@helgoland/flot';
+import { HelgolandMapSelectorModule } from '@helgoland/map/selector';
 import { TranslateModule } from '@ngx-translate/core';
-import {
-    HelgolandDatasetlistModule,
-    HelgolandFlotGraphModule,
-    HelgolandMapSelectorModule,
-    HelgolandSelectorModule,
-    HelgolandTimeModule,
-} from 'helgoland-toolbox';
 import { IonicModule } from 'ionic-angular';
 
 import { ComponentsModule } from '../../components/components.module';
@@ -33,11 +29,9 @@ import { TimeseriesService } from './timeseries.service';
         ModalLegendComponent
     ],
     imports: [
-        HelgolandSelectorModule,
+        HelgolandFlotModule,
         HelgolandMapSelectorModule,
-        HelgolandFlotGraphModule,
         HelgolandDatasetlistModule,
-        HelgolandTimeModule,
         TranslateModule.forChild(),
         ComponentsModule,
         IonicModule

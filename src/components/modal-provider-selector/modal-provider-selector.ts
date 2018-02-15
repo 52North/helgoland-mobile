@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Service } from 'helgoland-toolbox';
+import { Service } from '@helgoland/core';
 import { NavParams, ViewController } from 'ionic-angular';
 
 @Component({

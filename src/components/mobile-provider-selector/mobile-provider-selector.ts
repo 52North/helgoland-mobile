@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import {
-    ProviderSelectorComponent,
-} from 'helgoland-toolbox/dist/components/selector/provider-selector/provider-selector.component';
+import { ProviderSelectorComponent } from '@helgoland/selector';
 
 @Component({
   selector: 'mobile-provider-selector',

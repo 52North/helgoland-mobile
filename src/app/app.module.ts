@@ -1,20 +1,12 @@
 import { HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CachingInterceptor, HttpCache, LocalHttpCache, LocalOngoingHttpCache, OnGoingHttpCache } from '@helgoland/caching';
+import { ApiInterface, GetDataApiInterface, SettingsService } from '@helgoland/core';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import {
-    ApiInterface,
-    CachingInterceptor,
-    GetDataApiInterface,
-    HttpCache,
-    LocalHttpCache,
-    LocalOngoingHttpCache,
-    OnGoingHttpCache,
-    SettingsService,
-} from 'helgoland-toolbox';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { ComponentsModule } from '../components/components.module';

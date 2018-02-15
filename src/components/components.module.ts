@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
+import { HelgolandLabelMapperModule } from '@helgoland/depiction/label-mapper';
+import { HelgolandMapViewModule } from '@helgoland/map/view';
+import { HelgolandModificationModule } from '@helgoland/modification';
+import { HelgolandSelectorModule } from '@helgoland/selector';
 import { TranslateModule } from '@ngx-translate/core';
-import {
-	HelgolandDepictionModule,
-	HelgolandMapViewModule,
-	HelgolandModificationModule,
-	HelgolandSelectorModule,
-	HelgolandTimeModule,
-} from 'helgoland-toolbox';
 import { IonicModule } from 'ionic-angular';
 
 import { MobileListSelectorComponent } from './mobile-list-selector/mobile-list-selector';
@@ -37,11 +34,10 @@ import { ModalTimespanEditorComponent } from './modal-timespan-editor/modal-time
 	],
 	imports: [
 		IonicModule,
-		HelgolandSelectorModule,
-		HelgolandDepictionModule,
+		HelgolandLabelMapperModule,
 		HelgolandMapViewModule,
-		HelgolandTimeModule,
 		HelgolandModificationModule,
+		HelgolandSelectorModule,
 		TranslateModule.forChild(),
 	],
 	entryComponents: [

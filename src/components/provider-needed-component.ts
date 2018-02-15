@@ -1,4 +1,4 @@
-import { Service, Settings, SettingsService } from 'helgoland-toolbox';
+import { Service, Settings, SettingsService } from '@helgoland/core';
 import { ModalController } from 'ionic-angular';
 
 import { ModalProviderSelectorComponent } from './modal-provider-selector/modal-provider-selector';

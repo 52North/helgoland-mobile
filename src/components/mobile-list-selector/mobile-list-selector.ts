@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ListSelectorComponent } from 'helgoland-toolbox/dist/components/selector/list-selector/list-selector.component';
+import { ListSelectorComponent } from '@helgoland/selector';
 
 @Component({
   selector: 'mobile-list-selector',
@@ -12,5 +12,5 @@ export class MobileListSelectorComponent extends ListSelectorComponent {
       this.activePanel = this.selectorId + '-' + panelId;
     }
   }
-  
+
 }
