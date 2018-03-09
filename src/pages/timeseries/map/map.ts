@@ -28,7 +28,7 @@ export class TimeseriesMapPage extends ProviderNeededComponent {
     const modal = this.modalCtrl.create(StationSelectorComponent,
       {
         platform,
-        providerUrl: this.selectedProvider.providerUrl
+        providerUrl: this.selectedProvider.apiUrl
       }
     );
     modal.onDidDismiss(data => {

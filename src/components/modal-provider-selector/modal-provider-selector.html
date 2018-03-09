@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-title>
-        {{'timeseries.select-provider.header' | translate}}
+      {{'timeseries.select-provider.header' | translate}}
     </ion-title>
     <ion-buttons start *ngIf="selectedProvider">
       <button ion-button (click)="dismiss()">
@@ -12,6 +12,6 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <mobile-provider-selector [providerList]="providerList" [supportStations]="supportStations" [selectedProvider]="selectedProvider"
+  <mobile-provider-selector [providerList]="providerList" [supportStations]="supportStations" [selectedService]="selectedProvider"
     (onProviderSelected)="providerSelected($event)"></mobile-provider-selector>
 </ion-content>

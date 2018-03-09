@@ -1,20 +1,20 @@
 <ion-list>
   <ion-list-header *ngIf="loadingCount" text-center>
-    <span translate [translateParams]="{loadingCount: loadingCount}">provider-selector.loading</span>
+    <span translate [translateParams]="{loadingCount: loadingCount}">service-selector.loading</span>
   </ion-list-header>
-  <ion-item *ngFor="let provider of providers">
+  <ion-item *ngFor="let service of services">
     <ion-label>
-      <h2>{{provider.label}}</h2>
-      <p>{{provider.type}}, {{provider.version}}</p>
-      <p *ngIf="provider.serviceUrl">{{'provider-selector.service-url' | translate}}: {{provider.serviceUrl}}</p>
+      <h2>{{service.label}}</h2>
+      <p>{{service.type}}, {{service.version}}</p>
+      <p *ngIf="service.serviceUrl">{{'service-selector.service-url' | translate}}: {{service.serviceUrl}}</p>
       <p>
-        <span *ngIf="provider.quantities.stations">{{'provider-selector.stations' | translate}}: {{provider.quantities.stations}}</span>
-        <span *ngIf="provider.quantities.platforms">{{'provider-selector.platforms' | translate}}: {{provider.quantities.platforms}}</span>
-        <span *ngIf="provider.quantities.timeseries">{{'provider-selector.timeseries' | translate}}: {{provider.quantities.timeseries}}</span>
-        <span *ngIf="provider.quantities.datasets">{{'provider-selector.datasets' | translate}}: {{provider.quantities.datasets}}</span>
-        <span>{{'provider-selector.phenomena' | translate}}: {{provider.quantities.phenomena}}</span>
+        <span *ngIf="service.quantities.stations">{{'service-selector.stations' | translate}}: {{service.quantities.stations}}</span>
+        <span *ngIf="service.quantities.platforms">{{'service-selector.platforms' | translate}}: {{service.quantities.platforms}}</span>
+        <span *ngIf="service.quantities.timeseries">{{'service-selector.timeseries' | translate}}: {{service.quantities.timeseries}}</span>
+        <span *ngIf="service.quantities.datasets">{{'service-selector.datasets' | translate}}: {{service.quantities.datasets}}</span>
+        <span>{{'service-selector.phenomena' | translate}}: {{service.quantities.phenomena}}</span>
       </p>
     </ion-label>
-    <ion-radio checked="{{isSelected(provider)}}" (ionSelect)="selectProvider(provider)"></ion-radio>
+    <ion-radio checked="{{isSelected(service)}}" (ionSelect)="selectService(service)"></ion-radio>
   </ion-item>
 </ion-list>

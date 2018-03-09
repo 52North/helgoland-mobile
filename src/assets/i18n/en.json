@@ -4,25 +4,10 @@
 		"close": "Close",
 		"ok": "Ok"
 	},
-	"favorite": {
-		"notifier": {
-			"add-favorite": "Add favorite",
-			"remove-favorite": "Remove favorite"
-		}
-	},
 	"listSelection": {
 		"loading": ""
 	},
-	"profiles": {
-		"legend": {
-			"delete-subentry": "Remove this profile",
-			"edit-style": "Edit the style of this profile",
-			"go-to-combi-view": "Show in the combined view",
-			"show-geometry": "Show profile geometry",
-			"visibility": "Show/Hide this profile"
-		}
-	},
-	"provider-selector": {
+	"service-selector": {
 		"datasets": "Datasets",
 		"loading": "Requesting {{loadingCount}} services...",
 		"phenomena": "Phenomena",

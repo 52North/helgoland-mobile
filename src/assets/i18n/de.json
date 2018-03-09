@@ -4,25 +4,10 @@
 		"close": "Schließen",
 		"ok": "Ok"
 	},
-	"favorite": {
-		"notifier": {
-			"add-favorite": "Füge Favoriten hinzu",
-			"remove-favorite": "Entferne Favoriten"
-		}
-	},
 	"listSelection": {
 		"loading": ""
 	},
-	"profiles": {
-		"legend": {
-			"delete-subentry": "Entferne dieses Profil",
-			"edit-style": "Verändere das Aussehen dieses Profils",
-			"go-to-combi-view": "Zeige in der kombinierten Ansicht",
-			"show-geometry": "Zeige Profil-Geometry",
-			"visibility": "Zeige/Verstecke das Profil"
-		}
-	},
-	"provider-selector": {
+	"service-selector": {
 		"datasets": "Datensätze",
 		"loading": "Lade {{loadingCount}} Anbieter...",
 		"phenomena": "Phänomene",

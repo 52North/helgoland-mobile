@@ -86,7 +86,7 @@ export class TimeseriesListPage extends ProviderNeededComponent {
     super.setSelectedProvider(service);
     this.providerList = [{
       id: service.id,
-      url: service.providerUrl
+      url: service.apiUrl
     }]
   }
 
