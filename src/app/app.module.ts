@@ -1,7 +1,7 @@
-import { HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CachingInterceptor, HttpCache, LocalHttpCache, LocalOngoingHttpCache, OnGoingHttpCache } from '@helgoland/caching';
+import { HelgolandCachingModule } from '@helgoland/caching';
 import { ApiInterface, GetDataApiInterface, SettingsService } from '@helgoland/core';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -26,6 +26,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserModule,
     TimeseriesModule,
     ComponentsModule,
+    HelgolandCachingModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -44,10 +45,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     SplashScreen,
     { provide: ApiInterface, useClass: GetDataApiInterface },
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    { provide: SettingsService, useClass: JSSONSettingsService },
-    { provide: HTTP_INTERCEPTORS, useClass: CachingInterceptor, multi: true },
-    { provide: HttpCache, useClass: LocalHttpCache },
-    { provide: OnGoingHttpCache, useClass: LocalOngoingHttpCache }
+    { provide: SettingsService, useClass: JSSONSettingsService }
   ]
 })
 export class AppModule { }
