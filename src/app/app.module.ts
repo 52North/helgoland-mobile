@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HelgolandCachingModule } from '@helgoland/caching';
-import { ApiInterface, GetDataApiInterface, SettingsService } from '@helgoland/core';
+import { DatasetApiInterface, SettingsService, SplittedDataDatasetApiInterface } from '@helgoland/core';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -43,7 +43,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: ApiInterface, useClass: GetDataApiInterface },
+    { provide: DatasetApiInterface, useClass: SplittedDataDatasetApiInterface },
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     { provide: SettingsService, useClass: JSSONSettingsService }
   ]

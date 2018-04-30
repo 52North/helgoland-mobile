@@ -78,12 +78,12 @@
     yargs "8.0.2"
 
 "@helgoland/caching@^0.0.1-alpha.27":
-  version "0.0.1-alpha.39"
-  resolved "https://registry.yarnpkg.com/@helgoland/caching/-/caching-0.0.1-alpha.39.tgz#3fec44922de1dd716b20bb47a476b2ab7fea364c"
+  version "0.0.1-alpha.45"
+  resolved "https://registry.yarnpkg.com/@helgoland/caching/-/caching-0.0.1-alpha.45.tgz#e23439f7e78651234bce9f2b9cb1df34afbf0a18"
 
 "@helgoland/core@^0.0.1-alpha.27":
-  version "0.0.1-alpha.39"
-  resolved "https://registry.yarnpkg.com/@helgoland/core/-/core-0.0.1-alpha.39.tgz#2e3b7b35a26a47bae68d92bbc9199012847806de"
+  version "0.0.1-alpha.45"
+  resolved "https://registry.yarnpkg.com/@helgoland/core/-/core-0.0.1-alpha.45.tgz#86180dbd52270bbc6595710d597b640f68dc77e5"
   dependencies:
     "@ngx-translate/core" "^9.1.1"
     "@types/deep-equal" "^0.0.30"
@@ -93,16 +93,16 @@
     moment "^2.20.1"
 
 "@helgoland/depiction@^0.0.1-alpha.27":
-  version "0.0.1-alpha.39"
-  resolved "https://registry.yarnpkg.com/@helgoland/depiction/-/depiction-0.0.1-alpha.39.tgz#0498303c5b2286bce5b680299f7c336b24020e45"
+  version "0.0.1-alpha.45"
+  resolved "https://registry.yarnpkg.com/@helgoland/depiction/-/depiction-0.0.1-alpha.45.tgz#37ec4147363526f2dbfb21470b6d866a605958cf"
 
 "@helgoland/favorite@^0.0.1-alpha.27":
-  version "0.0.1-alpha.39"
-  resolved "https://registry.yarnpkg.com/@helgoland/favorite/-/favorite-0.0.1-alpha.39.tgz#9244717631399d6641e732f9c1c0ab83d5df3c4b"
+  version "0.0.1-alpha.45"
+  resolved "https://registry.yarnpkg.com/@helgoland/favorite/-/favorite-0.0.1-alpha.45.tgz#dd9282a0dde88d516c48bfe39dda3f08618a43de"
 
 "@helgoland/flot@^0.0.1-alpha.27":
-  version "0.0.1-alpha.39"
-  resolved "https://registry.yarnpkg.com/@helgoland/flot/-/flot-0.0.1-alpha.39.tgz#4dd86dfa03ec4cd7dae3458e4727984fb5657449"
+  version "0.0.1-alpha.45"
+  resolved "https://registry.yarnpkg.com/@helgoland/flot/-/flot-0.0.1-alpha.45.tgz#8a11239d17df11e82ee890b86ef72ad472f49e79"
   dependencies:
     "@types/flot" "^0.0.31"
     "@types/jquery" "^3.3.0"
@@ -110,8 +110,8 @@
     jquery "^3.2.1"
 
 "@helgoland/map@^0.0.1-alpha.27":
-  version "0.0.1-alpha.39"
-  resolved "https://registry.yarnpkg.com/@helgoland/map/-/map-0.0.1-alpha.39.tgz#1a83388b914b45d5ba46f1c5ee22810c0b1c1807"
+  version "0.0.1-alpha.45"
+  resolved "https://registry.yarnpkg.com/@helgoland/map/-/map-0.0.1-alpha.45.tgz#879d15db34ea018e5e94729c257c5fb3d6320c63"
   dependencies:
     "@types/leaflet" "^1.2.5"
     "@types/leaflet.markercluster" "^1.0.2"
@@ -119,18 +119,18 @@
     leaflet.markercluster "^1.3.0"
 
 "@helgoland/modification@^0.0.1-alpha.27":
-  version "0.0.1-alpha.39"
-  resolved "https://registry.yarnpkg.com/@helgoland/modification/-/modification-0.0.1-alpha.39.tgz#35c18d5f4029ccbcdee4e064b2ef7e04a7832293"
+  version "0.0.1-alpha.45"
+  resolved "https://registry.yarnpkg.com/@helgoland/modification/-/modification-0.0.1-alpha.45.tgz#6c039385d2d9c5d6fd9f8c1ebeb22dfd1bd2e4d8"
   dependencies:
     ngx-color-picker "^5.3.1"
 
 "@helgoland/selector@^0.0.1-alpha.27":
-  version "0.0.1-alpha.39"
-  resolved "https://registry.yarnpkg.com/@helgoland/selector/-/selector-0.0.1-alpha.39.tgz#ddd9e678969a12848ec8730d209f0f93bdafd04b"
+  version "0.0.1-alpha.45"
+  resolved "https://registry.yarnpkg.com/@helgoland/selector/-/selector-0.0.1-alpha.45.tgz#6e717e986c9448d75267f7845699461ebeaefc4c"
 
 "@helgoland/time@^0.0.1-alpha.27":
-  version "0.0.1-alpha.39"
-  resolved "https://registry.yarnpkg.com/@helgoland/time/-/time-0.0.1-alpha.39.tgz#768915a038f1bec8bf8e55f5446199e14136b48a"
+  version "0.0.1-alpha.45"
+  resolved "https://registry.yarnpkg.com/@helgoland/time/-/time-0.0.1-alpha.45.tgz#bc978c72a7e73b6817ad30331fd64a03fed81502"
 
 "@ionic-native/core@4.5.3":
   version "4.5.3"
@@ -202,8 +202,8 @@
     "@types/jquery" "*"
 
 "@types/geojson@*", "@types/geojson@^7946.0.1":
-  version "7946.0.2"
-  resolved "https://registry.yarnpkg.com/@types/geojson/-/geojson-7946.0.2.tgz#0bd0a01ef04e813c2b7580318da9e37c2eadea9c"
+  version "7946.0.3"
+  resolved "https://registry.yarnpkg.com/@types/geojson/-/geojson-7946.0.3.tgz#e5791534ab0acfb2b3a39b713966cfcee85d469f"
 
 "@types/jquery@*", "@types/jquery@^3.3.0":
   version "3.3.1"
@@ -216,8 +216,8 @@
     "@types/leaflet" "*"
 
 "@types/leaflet@*", "@types/leaflet@^1.2.5":
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/@types/leaflet/-/leaflet-1.2.6.tgz#e086d3c4771bce12b04d521b6ac35b5110b199b5"
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/@types/leaflet/-/leaflet-1.2.7.tgz#3dc357ea5e645033bf3569db6510d0d5e6a58df5"
   dependencies:
     "@types/geojson" "*"
 
@@ -2416,8 +2416,8 @@ mkdirp@0.5.1, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
     minimist "0.0.8"
 
 moment@^2.20.1:
-  version "2.21.0"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.21.0.tgz#2a114b51d2a6ec9e6d83cf803f838a878d8a023a"
+  version "2.22.1"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.1.tgz#529a2e9bf973f259c9643d237fda84de3a26e8ad"
 
 ms@2.0.0:
   version "2.0.0"
@@ -2436,8 +2436,8 @@ negotiator@0.6.1:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
 ngx-color-picker@^5.3.1:
-  version "5.3.7"
-  resolved "https://registry.yarnpkg.com/ngx-color-picker/-/ngx-color-picker-5.3.7.tgz#51ba5f9aa67044c181a15504ac81b654119cdc89"
+  version "5.3.8"
+  resolved "https://registry.yarnpkg.com/ngx-color-picker/-/ngx-color-picker-5.3.8.tgz#dd19767d9808a817471b57b3772082827a6ddb96"
 
 node-gyp@^3.3.1:
   version "3.6.2"
