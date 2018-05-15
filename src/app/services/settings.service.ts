@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Settings, SettingsService } from '@helgoland/core';
 
-export class MobileSettings extends Settings { }
+export interface MobileSettings extends Settings { }
 
 export let settings: MobileSettings;
 

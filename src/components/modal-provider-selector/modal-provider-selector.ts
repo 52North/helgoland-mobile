@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Service } from '@helgoland/core';
+import { Service, DatasetApi } from '@helgoland/core';
 import { NavParams, ViewController } from 'ionic-angular';
 
 @Component({
@@ -8,7 +8,7 @@ import { NavParams, ViewController } from 'ionic-angular';
 })
 export class ModalProviderSelectorComponent {
 
-  public providerList: string[] = [];
+  public datasetApiList: DatasetApi[] = [];
 
   public supportStations: boolean = true;
 
@@ -20,7 +20,7 @@ export class ModalProviderSelectorComponent {
   ) {
     this.selectedProvider = params.get('selectedProvider');
     const providerList = params.get('providerList');
-    if (providerList) { this.providerList = providerList; }
+    if (providerList) { this.datasetApiList = providerList; }
   }
 
   public providerSelected(service: Service) {
