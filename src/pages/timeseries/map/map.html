@@ -12,7 +12,7 @@
 </ion-header>
 
 <ion-content class="map-view">
-  <n52-station-map-selector *ngIf="selectedProvider" [mapId]="'timeseries'" [serviceUrl]="selectedProvider.providerUrl" [filter]="stationFilter"
+  <n52-station-map-selector *ngIf="selectedProvider" [mapId]="'timeseries'" [serviceUrl]="selectedProvider.apiUrl" [filter]="stationFilter"
     (onSelected)="onStationSelected($event)" [cluster]="true" (onContentLoading)="onMapLoading($event)"></n52-station-map-selector>
   <div class="loading-overlay" *ngIf="loading">
     <ion-spinner item-start name="circles"></ion-spinner>

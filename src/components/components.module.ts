@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { HelgolandLabelMapperModule } from '@helgoland/depiction/label-mapper';
-import { HelgolandMapViewModule } from '@helgoland/map/view';
+import { HelgolandLabelMapperModule } from '@helgoland/depiction';
+import { HelgolandMapViewModule } from '@helgoland/map';
 import { HelgolandModificationModule } from '@helgoland/modification';
 import { HelgolandSelectorModule } from '@helgoland/selector';
 import { TranslateModule } from '@ngx-translate/core';
@@ -8,7 +8,7 @@ import { IonicModule } from 'ionic-angular';
 
 import { MobileListSelectorComponent } from './mobile-list-selector/mobile-list-selector';
 import {
-	MobileMultiServiceFilterSelectorComponent,
+    MobileMultiServiceFilterSelectorComponent,
 } from './mobile-multi-service-filter-selector/mobile-multi-service-filter-selector';
 import { MobileProviderSelectorComponent } from './mobile-provider-selector/mobile-provider-selector';
 import { MobileTimeseriesEntryComponent } from './mobile-timeseries-entry/mobile-timeseries-entry';

@@ -1,15 +1,15 @@
 {
-  "restApiUrls": [
+  "datasetApis": [
     {
-      "name": "",
+      "name": "Wupperverband Zeitreihen Dienst",
       "url": "https://www.fluggs.de/sos2/api/v1/"
     },
     {
-      "name": "",
+      "name": "52North - Zeitreihen",
       "url": "https://sensorweb.demo.52north.org/sensorwebclient-webapp-stable/api/v1/"
     },
     {
-      "name": "",
+      "name": "IRCEL - CELINE",
       "url": "https://geo.irceline.be/sos/api/v1/"
     }
   ],

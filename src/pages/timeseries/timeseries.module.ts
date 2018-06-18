@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { HelgolandDatasetlistModule } from '@helgoland/depiction/datasetlist';
+import { HelgolandDatasetlistModule } from '@helgoland/depiction';
 import { HelgolandFlotModule } from '@helgoland/flot';
-import { HelgolandMapSelectorModule } from '@helgoland/map/selector';
+import { HelgolandMapSelectorModule } from '@helgoland/map';
 import { TranslateModule } from '@ngx-translate/core';
 import { IonicModule } from 'ionic-angular';
 
