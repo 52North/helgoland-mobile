@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DatasetOptions, Timespan } from '@helgoland/core';
-import { PlotOptions } from '@helgoland/flot';
+import { D3PlotOptions } from '@helgoland/d3';
 import { ModalController } from 'ionic-angular';
 
 import { ModalTimespanEditorComponent } from '../../../components/modal-timespan-editor/modal-timespan-editor';
@@ -15,29 +15,13 @@ import { ModalLegendComponent } from './modal-legend/modal-legend';
 export class TimeseriesDiagramPage {
 
   public datasetIds: string[];
-
   public datasetOptions: Map<string, DatasetOptions> = new Map();
-
+  public loading: boolean;
   public timespan = new Timespan(new Date().getTime() - 100000000, new Date().getTime());
 
-  public diagramOptions: PlotOptions = {
-    pan: {
-      frameRate: 10,
-      interactive: true
-    },
-    touch: {
-      delayTouchEnded: 200,
-      pan: 'x',
-      scale: ''
-    },
-    yaxis: {
-      additionalWidth: 17,
-      labelWidth: 40,
-      min: null,
-      panRange: false,
-      show: true,
-    },
-    showReferenceValues: true
+  public graphOptions: D3PlotOptions = {
+    // grid: true,
+    // showReferenceValues: true,
   };
 
   constructor(
@@ -48,6 +32,7 @@ export class TimeseriesDiagramPage {
     this.datasetIds = this.timeseriesSrvc.datasetIds;
     this.datasetOptions = this.timeseriesSrvc.datasetOptions;
     this.timeseriesSrvc.onTimespanChanged.subscribe(timespan => this.timespan = timespan);
+    this.timespan = this.timeseriesSrvc.getTimespan();
   }
 
   public timespanChanged(timespan: Timespan) {

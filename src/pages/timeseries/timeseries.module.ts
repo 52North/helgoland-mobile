@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
+import { HelgolandD3Module } from '@helgoland/d3';
 import { HelgolandDatasetlistModule } from '@helgoland/depiction';
-import { HelgolandFlotModule } from '@helgoland/flot';
 import { HelgolandMapSelectorModule } from '@helgoland/map';
 import { TranslateModule } from '@ngx-translate/core';
 import { IonicModule } from 'ionic-angular';
@@ -29,9 +29,9 @@ import { TimeseriesService } from './timeseries.service';
         ModalLegendComponent
     ],
     imports: [
-        HelgolandFlotModule,
         HelgolandMapSelectorModule,
         HelgolandDatasetlistModule,
+        HelgolandD3Module,
         TranslateModule.forChild(),
         ComponentsModule,
         IonicModule

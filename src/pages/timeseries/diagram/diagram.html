@@ -11,8 +11,8 @@
 
 <ion-content padding>
   <div class="diagram-view" *ngIf="datasetIds.length > 0">
-    <n52-flot-timeseries-graph [datasetIds]="datasetIds" [datasetOptions]="datasetOptions" [timeInterval]="timespan" [graphOptions]="diagramOptions"
-      (onTimespanChanged)="timespanChanged($event)" (onContentLoading)="loading = $event"></n52-flot-timeseries-graph>
+    <n52-d3-timeseries-graph [datasetIds]="datasetIds" [datasetOptions]="datasetOptions" [timeInterval]="timespan" [graphOptions]="graphOptions"
+      (onTimespanChanged)="timespanChanged($event)" (onContentLoading)="loading = $event"></n52-d3-timeseries-graph>
     <div class="loading-overlay" *ngIf="loading">
       <ion-spinner item-start name="circles"></ion-spinner>
       <span>{{'timeseries.diagram.loading' | translate}}...</span>
@@ -21,7 +21,7 @@
   <div *ngIf="datasetIds.length === 0">
     <ion-card>
       <ion-card-header text-center>
-          {{'timeseries.diagram.no-timeseries-selected' | translate}}
+        {{'timeseries.diagram.no-timeseries-selected' | translate}}
       </ion-card-header>
       <ion-card-content>
         <div text-center>{{'timeseries.diagram.select-timeseries' | translate}}:</div>
